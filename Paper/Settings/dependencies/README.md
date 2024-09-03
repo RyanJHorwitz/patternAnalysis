@@ -1,4 +1,4 @@
-### Folder Contents
+# Folder Contents
 
 1. subset.csv: if dataset contains multiple groups, this file enables you to specify the names of the groups that you are interested in and ignores uninterested groups.
 

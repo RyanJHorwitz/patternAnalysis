@@ -1,0 +1,7 @@
+# Paper Methodology
+
+Central tendency and error are calculated per sample for each pattern of predicted point locations.  Both calculations were undertaken using custom equidistant and equal area projected coordinate systems based on the total footprint of all predictions for each species.  Appropriate projections were used depending on whether distance or area needed to be preserved in a calculation.
+
+Selection of the central tendency measure is crucial as the center location can vary widely for the same sample and set of inputs.  In identifying the ideal measure, we aimed to determine which measure outputs a point that minimized the distance between itself and the ground truth for known-origin samples.  At the same time, we wanted the selected measure to be consistent across samples of the same species.  In the end, the goal was to choose a measure of central tendency that most accurately predicted the ground truth so that, when applied to samples of unknown location, predictions are expected to be the best possible estimates of truth.  As such, for each sample for each species, the median center, mean center, weighted mean center, and constrained weighted mean were calculated and compared.
+
+The standard deviational ellipse was selected as the ideal measure to classify error, capturing two axes of error and the direction of error.  Sample standard deviations were calculated at standard deviations of 1SD through 5SD.
